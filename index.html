@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacked!</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: monospace;
+            padding: 20px;
+        }
+        #terminal {
+            white-space: pre-wrap;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal"></div>
+    <img src="n.jpg" alt="narasiman" style="height: 100; width: 100;">
+    <script>
+        const terminal = document.getElementById("terminal");
+        const messages = [
+            "Initializing hack...",
+            "Connecting to server...",
+            "Accessing database...",
+            "Downloading sensitive files...",
+            "Injecting malware...",
+            "Disabling firewall...",
+            "Tracking location...",
+            "Gaining webcam access...",
+            "Hijacking microphone...",
+            "Retrieving personal data...",
+            "Sending data to dark web...",
+            "Encrypting system files...",
+            "Overclocking CPU to 100%...",
+            "Deleting important files...",
+            "Disabling system controls...",
+            "HACK COMPLETE!", 
+            "Shutting down system..."
+        ];
+
+        function typeMessage(index, repeat) {
+            if (repeat > 0) {
+                if (index < messages.length) {
+                    terminal.innerHTML += messages[index] + "\n";
+                    setTimeout(() => typeMessage(index + 1, repeat), 500); // Increased speed
+                } else {
+                    setTimeout(() => typeMessage(0, repeat - 1), 500); // Repeat the sequence 50 times
+                }
+            } else {
+                setTimeout(() => {
+                    alert("You've been hacked! Your system is now under our control! 😈");
+                    document.body.innerHTML = "<h1 style='color: red; text-align: center;'>SYSTEM FAILURE  😈</h1> ";
+                }, 2000);
+            }
+        }
+
+        typeMessage(0, 1
+        );
+    </script>
+</body>
+</html>
